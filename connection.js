@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 function connect() {
 	const connectionString =
-		'mongodb+srv://asifistiaque:01828398225@cluster0.6d6ew.mongodb.net/pharmacy?retryWrites=true&w=majority';
+		process.env.MONGO_URI;
 	mongoose
 		.connect(connectionString, {
 			useUnifiedTopology: true,
